@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Portafolio personal de Nany António — Desarrollo Full Stack y administración de sistemas.">
+<title>Nany António — /home/nany</title>
+<style>
+:root{color-scheme:light;--ink:#111;--paper:#fff;--dim:#666;--line:#ccc}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.8 "Courier New",Courier,monospace;-webkit-font-smoothing:auto}
+::selection{background:#111;color:#fff}
+a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{background:#111;color:#fff}
+a:focus-visible{outline:2px dashed #111;outline-offset:4px}
+.wrapper{width:min(100% - 44px,820px);margin:0 auto}
+header{padding:24px 0 28px;border-bottom:1px solid var(--ink)}
+.language-switch{display:flex;justify-content:flex-end;gap:8px;align-items:center;margin-bottom:24px;font-size:13px}
+.language-switch select{font:13px "Courier New",Courier,monospace;background:#fff;color:#111;border:1px solid #111;border-radius:0;padding:6px 8px;cursor:pointer}
+.language-switch select:focus-visible{outline:2px dashed #111;outline-offset:3px}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 210px;gap:28px;align-items:start}
+.topline{font-size:12px;letter-spacing:.02em;color:var(--dim);margin:0 0 18px}
+.name{font-size:clamp(33px,7vw,52px);font-weight:700;letter-spacing:-.06em;line-height:1.1;margin:0}
+.role{margin:12px 0 0;font-size:14px}
+nav{display:flex;gap:11px 22px;flex-wrap:wrap;margin-top:27px;font-size:13px}
+.portrait{justify-self:end;width:210px;border:1px solid var(--ink);padding:8px;background:#fff}
+.portrait img{display:block;width:100%;height:auto;filter:grayscale(100%);object-fit:cover}
+.portrait figcaption{margin-top:7px;font-size:11px;color:var(--dim);text-align:right}
+nav a{text-decoration:none;border-bottom:1px solid #111}
+section{padding:32px 0 30px;border-bottom:1px dashed var(--line)}
+h2{font-size:16px;letter-spacing:0;margin:0 0 18px;font-weight:700;text-transform:uppercase}
+h2:before{content:"> ";font-weight:400}
+p{margin:0 0 14px;max-width:690px}
+.note{font-size:13px;color:var(--dim)}
+.skills{margin:0;padding:0;list-style:none}
+.skills li{margin:4px 0}
+.skills li::before{content:"- ";color:var(--dim)}
+.entry{margin-bottom:23px}
+.entry:last-child{margin-bottom:0}
+.entry-head{display:flex;justify-content:space-between;gap:8px 18px;align-items:baseline;flex-wrap:wrap}
+h3{font-size:15px;margin:0;font-weight:700}
+.year{font-size:12px;color:var(--dim);white-space:nowrap}
+.entry p{margin:5px 0;font-size:14px}
+.links{margin-top:10px;font-size:13px}
+.contact-line{margin:0 0 7px;overflow-wrap:anywhere}
+footer{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;padding:27px 0 45px;font-size:12px;color:var(--dim)}
+.cursor{display:inline-block;width:9px;height:16px;background:#111;vertical-align:-2px;animation:blink 1.15s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.cursor{animation:none}html{scroll-behavior:auto}}
+@media(max-width:700px){.hero{grid-template-columns:1fr}.portrait{justify-self:start;width:min(100%,260px);margin-top:14px}}
+@media(max-width:490px){header{padding-top:28px}section{padding:25px 0}nav{gap:10px 17px}body{font-size:14px}}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<header id="inicio">
+  <div class="language-switch"><label for="language" aria-label="Idioma">◎ <span aria-hidden="true">🌐</span></label><select id="language" aria-label="Seleccionar idioma"><option value="es">ES — Español</option><option value="pt">PT — Português</option><option value="en">EN — English</option><option value="fr">FR — Français</option></select></div>
+  <div class="hero">
+    <div>
+      <p class="topline">/home/nany/portfolio &nbsp; — &nbsp; index.html</p>
+      <h1 class="name">NANY ANTÓNIO<span class="cursor" aria-hidden="true"></span></h1>
+      <p class="role"><span data-i18n="role">Full Stack Developer / administración de sistemas</span></p>
+      <nav aria-label="Navegación principal">
+        <a href="#sobre"><span data-i18n="nav_about">[ sobre mí ]</span></a>
+        <a href="#skills"><span data-i18n="nav_skills">[ skills ]</span></a>
+        <a href="#proyectos"><span data-i18n="nav_projects">[ proyectos ]</span></a>
+        <a href="#experiencia"><span data-i18n="nav_experience">[ experiencia ]</span></a>
+        <a href="#contacto"><span data-i18n="nav_contact">[ contacto ]</span></a>
+      </nav>
+    </div>
+    <figure class="portrait">
+      <img src="profile.jpg" alt="Fotografía de Nany António" data-i18n-alt="photo">
+      <figcaption>[ profile.jpg ]</figcaption>
+    </figure>
+  </div>
+</header>
+<main>
+<section id="sobre">
+  <h2 data-i18n="about_title">Sobre mí</h2>
+  <p id="about-description" data-i18n-dynamic="about_text">Desarrollador web Full Stack con 9 años de experiencia, principalmente con PHP y Laravel. Actualmente estoy orientando mi carrera hacia la infraestructura tecnológica y la administración de sistemas Linux.</p>
+</section>
+<section id="skills">
+  <h2 data-i18n="skills_title">Habilidades</h2>
+  <ul class="skills">
+    <li><strong><span data-i18n="ides">IDEs e ferramentas:</span></strong> PhpStorm, DataGrip, IntelliJ IDEA, SoapUI, Postman</li>
+    <li><strong><span data-i18n="langs">Linguagens de programação e marcação:</span></strong> PHP, Python, JavaScript, SQL, HTML5, CSS, jQuery, Bootstrap</li>
+    <li><strong><span data-i18n="frameworks">Frameworks:</span></strong> Laravel, CodeIgniter, SmartyPHP, React</li>
+    <li><strong><span data-i18n="others">Outras tecnologias:</span></strong> WordPress, Jira, Bitbucket, Figma, Laradock, Apache, Nginx, Docker, Distrobox, MySQL, PostgreSQL</li>
+  </ul>
+</section>
+<section id="proyectos">
+  <h2 data-i18n="projects_title">Proyectos</h2>
+  <article class="entry">
+    <div class="entry-head"><h3>Dikanda do Reino do Kongo</h3><span class="year"><span data-i18n="dikanda_cat">Cultura digital</span></span></div>
+    <p><span data-i18n="dikanda_desc">Plataforma cultural con archivo multimedia, biblioteca de 58 publicaciones, radionovela y contenido en tres idiomas.</span></p>
+    <p class="note">WordPress / PHP / JavaScript / REST API</p>
+    <div class="links"><a href="https://dikandakongo.com" target="_blank" rel="noopener noreferrer"><span data-i18n="visit">Visitar proyecto ↗</span></a></div>
+  </article>
+  <article class="entry">
+    <div class="entry-head"><h3><span data-i18n="zap_title">ZAP — Aplicaciones internas</span></h3><span class="year"><span data-i18n="zap_cat">Telecomunicaciones</span></span></div>
+    <p><span data-i18n="zap_desc">Desarrollo y mantenimiento de sistemas para operaciones, fibra óptica y ventas.</span></p>
+    <p class="note">PHP / Laravel / JavaScript / SQL</p>
+  </article>
+  <article class="entry">
+    <div class="entry-head"><h3><span data-i18n="usp_title">USP — Bioinformática</span></h3><span class="year"><span data-i18n="usp_cat">Investigación</span></span></div>
+    <p><span data-i18n="usp_desc">Soporte a aplicaciones Java Web, administración Linux e integración de datos científicos.</span></p>
+    <p class="note">Linux / Java / Tomcat / rsync</p>
+  </article>
+</section>
+<section id="experiencia">
+  <h2 data-i18n="experience_title">Experiencia</h2>
+  <p><strong>2025–2026</strong> &nbsp; Universidade de São Paulo / FAPESP</p>
+  <p><strong>2017–2025</strong> &nbsp; Finstar / ZAP — Full Stack Developer</p>
+  <p><strong>2024–2025</strong> &nbsp; ONGAIA / AIA — <span data-i18n="webdev">Desarrollo web</span></p>
+  <p class="links"><a href="CV_Nany_Antonio.pdf" download><span data-i18n="download">Descargar currículo [PDF] ↓</span></a></p>
+</section>
+<section id="contacto">
+  <h2 data-i18n="contact_title">Contacto</h2>
+  <p class="contact-line">Email: <a href="mailto:nany.kuzola@usp.br">nany.kuzola@usp.br</a></p>
+  <p class="contact-line"><span data-i18n="phone_label">Telefone</span>: <a href="tel:+5512997733224">+55 12 99 77 33 22 4</a></p>
+  <p class="contact-line">LinkedIn: <a href="https://www.linkedin.com/in/nany-kuzola-245201199/" target="_blank" rel="noopener noreferrer">nany-kuzola</a></p>
+</section>
+</main>
+<footer><span>© <span id="year">2026</span> Nany António</span><span><span data-i18n="footer">Made with HTML + CSS. No frameworks.</span></span></footer>
+</div>
+<script>
+const translations = {"es":{"phone_label":"Teléfono","role":"Full Stack Developer / administración de sistemas","nav_about":"[ sobre mí ]","nav_skills":"[ skills ]","nav_projects":"[ proyectos ]","nav_experience":"[ experiencia ]","nav_contact":"[ contacto ]","about_title":"Sobre mí","skills_title":"Habilidades","projects_title":"Proyectos","experience_title":"Experiencia","contact_title":"Contacto","about_text":"Desarrollador web Full Stack con {years} años de experiencia, principalmente con PHP y Laravel. Actualmente estoy orientando mi carrera hacia la infraestructura tecnológica y la administración de sistemas Linux.","ides":"IDEs e ferramentas:","langs":"Linguagens de programação e marcação:","frameworks":"Frameworks:","others":"Outras tecnologias:","dikanda_cat":"Cultura digital","dikanda_desc":"Plataforma cultural con archivo multimedia, biblioteca de 58 publicaciones, radionovela y contenido en tres idiomas.","visit":"Visitar proyecto ↗","zap_title":"ZAP — Aplicaciones internas","zap_cat":"Telecomunicaciones","zap_desc":"Desarrollo y mantenimiento de sistemas para operaciones, fibra óptica y ventas.","usp_title":"USP — Bioinformática","usp_cat":"Investigación","usp_desc":"Soporte a aplicaciones Java Web, administración Linux e integración de datos científicos.","webdev":"Desarrollo web","download":"Descargar currículo [PDF] ↓","footer":"Made with HTML + CSS. No frameworks.","photo":"Fotografía de Nany António"},"pt":{"phone_label":"Telefone","role":"Full Stack Developer / administração de sistemas","nav_about":"[ sobre mim ]","nav_skills":"[ habilidades ]","nav_projects":"[ projetos ]","nav_experience":"[ experiência ]","nav_contact":"[ contacto ]","about_title":"Sobre mim","skills_title":"Habilidades","projects_title":"Projetos","experience_title":"Experiência","contact_title":"Contacto","about_text":"Desenvolvedor web Full Stack com {years} anos de experiência, principalmente com PHP e Laravel. Atualmente, estou a direcionar a minha carreira para a infraestrutura tecnológica e a administração de sistemas Linux.","ides":"IDEs e ferramentas:","langs":"Linguagens de programação e marcação:","frameworks":"Frameworks :","others":"Outras tecnologias:","dikanda_cat":"Cultura digital","dikanda_desc":"Plataforma cultural com arquivo multimédia, biblioteca de 58 publicações, radionovela e conteúdos em três línguas.","visit":"Visitar projeto ↗","zap_title":"ZAP — Aplicações internas","zap_cat":"Telecomunicações","zap_desc":"Desenvolvimento e manutenção de sistemas para operações, fibra ótica e vendas.","usp_title":"USP — Bioinformática","usp_cat":"Investigação","usp_desc":"Suporte a aplicações Java Web, administração Linux e integração de dados científicos.","webdev":"Desenvolvimento web","download":"Descarregar currículo [PDF] ↓","footer":"Feito com HTML + CSS. Sem frameworks.","photo":"Fotografia de Nany António"},"en":{"phone_label":"Phone","role":"Full Stack Developer / systems administration","nav_about":"[ about ]","nav_skills":"[ skills ]","nav_projects":"[ projects ]","nav_experience":"[ experience ]","nav_contact":"[ contact ]","about_title":"About me","skills_title":"Skills","projects_title":"Projects","experience_title":"Experience","contact_title":"Contact","about_text":"Full Stack web developer with {years} years of experience, primarily in PHP and Laravel. I am currently shifting my career towards IT infrastructure and Linux systems administration.","ides":"IDEs and tools:","langs":"Programming and markup languages:","frameworks":"Frameworks:","others":"Other technologies:","dikanda_cat":"Digital culture","dikanda_desc":"Cultural platform with a multimedia archive, a library of 58 publications, a radio drama and content in three languages.","visit":"Visit project ↗","zap_title":"ZAP — Internal applications","zap_cat":"Telecommunications","zap_desc":"Development and maintenance of systems for operations, fibre networks and sales.","usp_title":"USP — Bioinformatics","usp_cat":"Research","usp_desc":"Support for Java Web applications, Linux administration and scientific data integration.","webdev":"Web development","download":"Download résumé [PDF] ↓","footer":"Made with HTML + CSS. No frameworks.","photo":"Portrait of Nany António"},"fr":{"phone_label":"Téléphone","role":"Développeur Full Stack / administration systèmes","nav_about":"[ à propos ]","nav_skills":"[ compétences ]","nav_projects":"[ projets ]","nav_experience":"[ expérience ]","nav_contact":"[ contact ]","about_title":"À propos","skills_title":"Compétences","projects_title":"Projets","experience_title":"Expérience","contact_title":"Contact","about_text":"Développeur web Full Stack avec {years} ans d’expérience, principalement en PHP et Laravel. Je réoriente actuellement ma carrière vers l’infrastructure informatique et l’administration de systèmes Linux.","ides":"EDI et outils :","langs":"Langages de programmation et de balisage :","frameworks":"Frameworks :","others":"Autres technologies :","dikanda_cat":"Culture numérique","dikanda_desc":"Plateforme culturelle avec des archives multimédias, une bibliothèque de 58 publications, une fiction radiophonique et des contenus en trois langues.","visit":"Voir le projet ↗","zap_title":"ZAP — Applications internes","zap_cat":"Télécommunications","zap_desc":"Développement et maintenance de systèmes pour les opérations, la fibre optique et les ventes.","usp_title":"USP — Bioinformatique","usp_cat":"Recherche","usp_desc":"Support d’applications Java Web, administration Linux et intégration de données scientifiques.","webdev":"Développement web","download":"Télécharger le CV [PDF] ↓","footer":"Réalisé en HTML + CSS. Sans frameworks.","photo":"Photo de Nany António"}};
+const experienceYears = new Date().getFullYear() - 2017;
+document.getElementById('year').textContent = new Date().getFullYear();
+const langSelect = document.getElementById('language');
+function setLanguage(lang) {
+  const strings = translations[lang] || translations.es;
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = strings[el.dataset.i18n]; });
+  document.querySelectorAll('[data-i18n-dynamic]').forEach(el => {
+    el.textContent = strings[el.dataset.i18nDynamic].replace('{years}', experienceYears);
+  });
+  document.querySelectorAll('[data-i18n-alt]').forEach(el => { el.alt = strings[el.dataset.i18nAlt]; });
+  langSelect.value = lang;
+  try { localStorage.setItem('nany-portfolio-language', lang); } catch (_) {}
+}
+langSelect.addEventListener('change', e => setLanguage(e.target.value));
+let initialLanguage = 'es';
+try { initialLanguage = localStorage.getItem('nany-portfolio-language') || 'es'; } catch (_) {}
+setLanguage(initialLanguage in translations ? initialLanguage : 'es');
+</script>
+</body>
+</html>
